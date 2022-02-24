@@ -1,0 +1,43 @@
+{
+  "private": true,
+  "engines": {
+    "node": ">=4"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "serve:test": "cross-env NODE_ENV=test gulp serve",
+    "serve:dist": "cross-env NODE_ENV=production gulp serve",
+    "start": "gulp serve",
+    "build": "cross-env NODE_ENV=production gulp",
+    "test": "npm run serve:test",
+    "tasks": "gulp --tasks"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "Firefox ESR"
+  ],
+  "eslintConfig": {
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "env": {
+      "es6": true,
+      "node": true,
+      "browser": true,
+      "jquery": true
+    },
+    "rules": {
+      "quotes": [
+        2,
+        "single"
+      ]
+    }
+  }
+}

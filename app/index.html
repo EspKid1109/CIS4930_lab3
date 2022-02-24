@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>web page</title>
+    <!-- Place favicon.ico in the root directory -->
+    <!-- build:css styles/main.css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="hero-unit">
+
+        <div class="px-4 py-5 my-5 text-center">
+          <img class="d-block mx-auto mb-4" src="images/logo.jpg" alt="" width="150" height="150">
+          <h1 class="display-5 fw-bold">CIS 4930 Mobile Computing</h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Lab 3 - Metronome Thing Implementation Using Raspberry Pi</p>
+            <p class="lead mb-0"><strong>Start:</strong> </p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <button id="start_new" type="button" class="btn btn-outline-primary btn-lg btn-block">Start New BPM</button>
+            </div>
+            <p class="lead mb-0"><strong>Refresh:</strong> </p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <button id="refresh_current" type="button" class="btn btn-outline-primary btn-lg btn-block">Refresh current BPM</button>
+              <button id="refresh_min" type="button" class="btn btn-outline-primary btn-lg btn-block">Refresh Minimum BPM</button>
+              <button id="refresh_max" type="button" class="btn btn-outline-primary btn-lg btn-block">Refresh Maximum BPM</button>
+            </div>
+            <p class="lead mb-0"><strong>Reset:</strong> </p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <button id="reset_current" type="button" class="btn btn-outline-primary btn-lg btn-block">Reset Current BPM</button>
+              <button id="reset_min" type="button" class="btn btn-outline-primary btn-lg btn-block">Reset Minimum BPM</button>
+              <button id="reset_max" type="button" class="btn btn-outline-primary btn-lg btn-block">Reset Maximum BPM</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="jumbotron">
+          <h1 class="display-4 text-center">Latest Task Runned</h1>
+          <!-- <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p> -->
+          <hr class="my-4">
+          <p id="task_runned" class="lead text-center">Waiting for input...</p>
+          <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
+        </div>
+      
+      <!-- <ul>
+        <li>HTML5 Boilerplate</li>
+        <li>jQuery</li>
+      </ul> -->
+    </div>
+    <!-- build:js scripts/vendor.js -->
+    <!-- <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script> -->
+    <!-- endbuild -->
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
