@@ -9,6 +9,24 @@ const reset_max_button = document.querySelector("#reset_max").onclick = reset_ma
 
 const request = new XMLHttpRequest()
 
+const URI = 'http://localhost:8080/bpm'
+
+document.getElementById('start_new').disabled = true; //Disable at first
+const og_test = document.getElementById('newBPM').innerText;
+
+document.getElementById('new_bpm').addEventListener('keyup', e => {
+  //Check for the input's value
+  if (!e.target.value) {
+    document.getElementById('start_new').disabled = true;
+    document.getElementById('newBPM').innerText = og_test;
+  }
+  else {
+    document.getElementById('start_new').disabled = false;
+    document.getElementById('newBPM').innerText = "";
+
+  }
+});
+
 request.addEventListener('readystatechange', () => {
     if(request.readyState === 4){
         var res = JSON.parse(request.responseText)
@@ -21,8 +39,15 @@ request.addEventListener('readystatechange', () => {
 function start_new(){
     console.log("Start New clicked");
     change_task("Start New");
-    request.open('GET', 'http://localhost:8888/bpm');
-    request.send()
+    var data = document.querySelector("#new_bpm").value;
+    console.log("New BPM", data);
+    request.open('GET', URI);
+
+    const json = {
+        "newBPM": data
+    };
+
+    request.send(JSON.stringify(json))
 };
 
 function refresh_current(){

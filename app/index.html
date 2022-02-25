@@ -15,16 +15,22 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <div class="hero-unit">
-
         <div class="px-4 py-5 my-5 text-center">
           <img class="d-block mx-auto mb-4" src="images/logo.jpg" alt="" width="150" height="150">
           <h1 class="display-5 fw-bold">CIS 4930 Mobile Computing</h1>
           <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">Lab 3 - Metronome Thing Implementation Using Raspberry Pi</p>
             <p class="lead mb-0"><strong>Start:</strong> </p>
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-              <button id="start_new" type="button" class="btn btn-outline-primary btn-lg btn-block">Start New BPM</button>
-            </div>
+            <form>
+              <div class="form1 justify-content-sm-center d-grid">
+                <label for="new_bpm_">New BPM</label>
+                <input type="number" class="form-control" id="new_bpm" aria-describedby="newBPM" placeholder="Enter new BPM to be set up.">
+                <small id="newBPM" class="text-danger">Enter new BPM before sending request.</small>
+              </div>
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <button id="start_new" type="button" class="btn btn-outline-primary btn-lg btn-block">Start New BPM</button>
+              </div>
+            </form>
             <p class="lead mb-0"><strong>Refresh:</strong> </p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
               <button id="refresh_current" type="button" class="btn btn-outline-primary btn-lg btn-block">Refresh current BPM</button>
